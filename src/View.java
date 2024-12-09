@@ -53,18 +53,14 @@ public class View extends BorderPane {
         bottomPane.getChildren().add(quitButton);
         bottomPane.setAlignment(Pos.CENTER);
 
-        //Create the snake head at row 7 and column 7;
+        // Creating the head of the snake
         snake = new SnakePart(252, 252, 36, Color.BLACK, true);
-
-        //Add the snake head to the ArrayList that will hold all of the snakes
         sBody.add(snake);
         tileGrid.getChildren().add(snake.getRectangle());
 
-        //Add the fruit to appear in front of the snake head.
+        // Creating the initial fruit
         Fruit fruit = new TastyFruit(432, 252, tiles.get(0).getWidth()/2);
         listOfFruit.add(fruit);
-
-        //call the method to add the fruit to the grid;
         addFruit();
 
         tileGrid.setAlignment(Pos.CENTER);
@@ -75,7 +71,7 @@ public class View extends BorderPane {
             sBody.add(snake2);
         }
 
-        //Create a Label to display the current score and add it to the display.
+        //Creating a Label to display the current score and add it to the display.
         Label newLabel = new Label("Score: " + score + " 🍎");
         upperPane.getChildren().add(newLabel);
         upperPane.setAlignment(Pos.CENTER);
@@ -104,7 +100,7 @@ public class View extends BorderPane {
                 }
                 
                 tiles.add(tile);
-                tileGrid.add(tile, j, i); // Note: GridPane uses (column, row)
+                tileGrid.add(tile, j, i);
             }
         }
     }
@@ -135,25 +131,31 @@ public class View extends BorderPane {
         Label myLabel = (Label)upperPane.getChildren().get(0);
         myLabel.setText("Score: " + score + " 🍎");
     }
+
     /**
      * Remove the Fruit visually and update the score acordingly. 
      */
     public void removeFruit(Fruit fruit){
     
-        // Remove the fruit from the grid and the list
-        tileGrid.getChildren().remove(fruit.getFruit()); // Removes the graphical fruit
-        listOfFruit.remove(fruit); // Removes the fruit object from the list
+        // Removing the fruit from the grid and the list
+        tileGrid.getChildren().remove(fruit.getFruit()); 
+        listOfFruit.remove(fruit); 
     }
     
     public void addFruit(){
-        // Add each fruit to the grid
+        // Adding each fruit to the grid
         for (Fruit fruit : listOfFruit) {
             if (!tileGrid.getChildren().contains(fruit.getFruit())) {
-                tileGrid.getChildren().add(fruit.getFruit()); // Add fruit to the grid
+                tileGrid.getChildren().add(fruit.getFruit());
             }
         }
     }
 
+    /**
+     * Updating the positions of the snake and the fruits
+     * @param centerX
+     * @param centerY
+     */
     public void updatePos(double centerX, double centerY) {
         for (int i = 0; i < sBody.size(); i++) {
                 sBody.get(i).getRectangle().setTranslateX(sBody.get(i).getCenterX());
@@ -167,6 +169,7 @@ public class View extends BorderPane {
   
     }
 
+    // Getters and setters
     public ArrayList<Rectangle> getTiles() {
         return tiles;
     }
