@@ -49,3 +49,4 @@ This is a Snake Game is a classic grid based game where players can control the 
 4. Adan Morones:
     - Created the fruit classes/interface.
     - Made sure the snake cannot move in the opposite direction of its current movement.
+    - Helped with the general structure and readability of the code.
