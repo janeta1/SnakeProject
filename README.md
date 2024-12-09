@@ -31,6 +31,7 @@ This is a Snake Game is a classic grid based game where players can control the 
     - Implemented the grow and shrink snake logic.
     - Made sure there is alwasy enough good fruits on the screen.
     - Implemented the snake collision with itself logic (with Mark).
+    - Worked on the User Guide
 2. Mark Turner:
     - Implemented the movement of the snake logic (with Janeta).
     - Implemented fruit collision logic (with Sree).
@@ -38,6 +39,7 @@ This is a Snake Game is a classic grid based game where players can control the 
     - Implemented the snake collision with itself logic (with Janeta).
     - Implemented the logic of changing the direction of the snake (with Adan).
     - Implemented the key controls logic.
+    - Worked on the User Guide
 3. Sreelakshmi Atholi:
     - Worked on the fruit to be implemented in the game.
     - Implemented the spawning of fruits logic (with Mark).
