@@ -42,6 +42,8 @@ This is a Snake Game is a classic grid based game where players can control the 
     - Worked on the fruit to be implemented in the game.
     - Implemented the spawning of fruits logic (with Mark).
     - Implemented fruit collision logic (with Mark).
+    - Wrote the ReadMe file.
+    - Updated the User guide. 
 4. Adan Morones:
     - Created the fruit classes/interface.
     - Made sure the snake cannot move in the opposite direction of its current movement.
